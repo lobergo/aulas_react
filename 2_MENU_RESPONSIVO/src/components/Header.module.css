@@ -1,21 +1,44 @@
-.menu_logo {
-    border: 1px solid royalblue;
+
+
+.desktop {
+    display: none;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #aaa;
+}
+
+.mobile {
+    position: relative;
+}
+
+.desctop_options{
+    display: flex;
+    gap: 2rem;
+}
+
+.menu {
+    border: 1px solid #aaa;
     display: flex;
     justify-content: space-between;
     height: 4rem;
     align-items: center;
     padding-inline: 1rem;
+    margin-bottom: 1rem;
 }
 
-.opcoes {
+.options {
     border: 1px solid red;
     width: 10rem;
     padding-block: 1rem;
-
     translate: -100%;
+    position: absolute;
+    background: #fff;
+    top: 4.625rem;
+
+    transition: translate .3s;
 }
 
-.opcoes nav {
+.options nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -23,6 +46,16 @@
 
 }
 
-.opcoes.open {
+.options.open {
     translate: 0;
+}
+
+@media (min-width: 800px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+    }
 }
